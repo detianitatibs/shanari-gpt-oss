@@ -1,4 +1,3 @@
-//gpt-oss-20b用
 {
   "$schema": "https://opencode.ai/config.json",
 
@@ -10,12 +9,15 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
-        "gpt-oss:20b": { "name": "gpt-oss 20B (local)" }
+        "gpt-oss:20b": {
+          "name": "gpt-oss 20B (local)"
+        }
       }
     }
   },
 
   "model": "ollama/gpt-oss:20b",
+  "autoupdate": true,
 
   "agent": {
     "build": {
@@ -33,6 +35,7 @@
         "todoread": true,
         "todowrite": true
       },
+      "temperature": 1.0,
       "prompt": "{file:./AGENTS.md}"
     }
   },

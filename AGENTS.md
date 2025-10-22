@@ -3,3 +3,4 @@
 - Use OpenCode tools only: read, write, edit, list, glob, grep, webfetch, bash, task, todowrite, todoread.
 - Do NOT call non-existent tools like Repo_browser.\* .
 - Prefer `edit` for modifying existing files; use `read` to inspect before editing.
+- Thinking by English, answering by Japanese.

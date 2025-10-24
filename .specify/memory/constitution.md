@@ -1,42 +1,66 @@
+<!--
+Sync Impact Report:
+- Version change: 1.0.0 → 1.1.0
+- Added/Expanded Principles: Security now includes Auth-First (SAML) and strict input sanitization.
+- Added Additional Constraints: NextJS, Atomic Design, Clean Architecture, SQLite (Cloud Storage mount), Cloud Run, GCP, Docker, GitHub Actions CI/CD, Artifact Registry.
+- Added Development Workflow details: ESLint, Jest, Docker build, Cloud Run deploy, TDD enforcement.
+- Updated Governance: no change to process.
+- Templates updated: ✅ .specify/templates/spec-template.md, plan-template.md, tasks-template.md.
+-->
 # BlogWebApp Constitution
-<!-- Specified for a web application with blogging feature -->
+<!-- Specified for a personal web application with top page, profile, and blogging features. -->
 
 ## Core Principles
 
 ### I. Content-First
-The application prioritizes high-quality, well-structured content. All features must support content creation, editing, and publishing workflows, with a focus on ease of use for authors.
+The application prioritizes high‑quality, well‑structured content. All features must support content creation, editing, and publishing workflows, with a focus on ease of use for authors.
 
-### II. SEO-friendly
-Every route, meta tag, and data payload must be optimized for search engines. URLs should be human-readable, headings structured, and schema.org annotations used wherever applicable.
+### II. SEO‑friendly
+Every route, meta tag, and data payload must be optimized for search engines.
 
 ### III. Responsive Design
-The UI must adapt seamlessly to mobile, tablet, and desktop. All components are built with CSS flexbox/grid and tested on the latest two major browsers.
+The UI must adapt seamlessly to mobile, tablet, and desktop.
 
 ### IV. Performance
-The application should load in under 2 seconds on a 3G connection. Caching strategies, code splitting, and asset optimization are mandatory.
+The application should load in under 2 seconds.
 
-### V. Security
-All user input is sanitized to prevent XSS, CSRF tokens are required, and authentication is handled via stateless JWTs with secure storage.
+### V. Security & Authentication (Auth‑First)
+- All user input is sanitized.
+- CSRF protection is mandatory.
+- SAML‑based authentication.
+- Stateless JWTs.
+- Scope checks.
 
 ## Additional Constraints
 
-### Technology Stack Requirements
-- Frontend: React 18 + Vite
-- Backend: Node.js 20 + Express
-- Database: PostgreSQL
-- Deployment: Docker Compose
+### Technology Stack & Architecture
+- Frontend: Next.js 15 (React 18) with Atomic Design and Clean Architecture patterns.
+- Backend: Node.js 25 with Express, serving a server‑less API.
+- Database: SQLite3 stored in Cloud Storage, mounted into Cloud Run via volume.
+- Infrastructure: Deployed on Google Cloud Run; Dockerized via a multi‑stage Dockerfile.
+- Local Development: Docker Compose on macOS (Linux containers) exposing `localhost:3000`.
+- CI/CD: GitHub Actions running ESLint, Jest, Docker build, Artifact Registry push, and Cloud Run deployment.
+- Authentication: SAML SSO integrated with Google Workspace or another IdP.
+- Styling: Tailwind CSS. Main color zinc‑200, sub‑color yellow‑300, accent color indigo‑400.
 
 ## Development Workflow
 
 ### Review Process
-- All pull requests must pass unit tests (≥90% coverage), linting, and a static type check.
-- A code review is mandatory; at least one senior developer must approve.
+- PRs must pass unit tests (≥90% coverage), linting (ESLint), and static type checks (TS).
+- Code reviews are mandatory; at least one senior developer must approve.
+- Migration plan required on schema change.
 
 ### Quality Gates
-- Deployments to staging must include performance benchmarks and security scans.
+- Staging deployments trigger performance benchmarks and security scans.
+- Docker images are built and scanned with Trivy before being pushed to Artifact Registry.
+
+### Test‑Driven Development
+- Tests written before or alongside implementation.
+- No merge unless all tests pass under CI.
 
 ## Governance
 
-All changes to the constitution must be proposed in a GitHub issue, discussed, and approved via a 2/3 majority of council members. Amendments trigger a release candidate build to ensure backward compatibility. Compliance is reviewed quarterly by the governance board.
+All changes to the constitution must be proposed in a GitHub issue, discussed, and approved via a 2/3 majority of council members.
+Compliance reviewed quarterly by the governance board.
 
-**Version**: 1.0.0 | **Ratified**: 2025-10-23 | **Last Amended**: 2025-10-23
+**Version**: 1.1.0 | **Ratified**: 2025-10-23 | **Last Amended**: 2025-10-23

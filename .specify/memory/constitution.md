@@ -16,49 +16,51 @@ Sync Impact Report:
 The application prioritizes high‑quality, well‑structured content. All features must support content creation, editing, and publishing workflows, with a focus on ease of use for authors.
 
 ### II. SEO‑friendly
-Every route, meta tag, and data payload must be optimized for search engines. URLs should be human‑readable, headings structured, and schema.org annotations used wherever applicable.
+Every route, meta tag, and data payload must be optimized for search engines.
 
 ### III. Responsive Design
-The UI must adapt seamlessly to mobile, tablet, and desktop. All components are built with CSS flexbox/grid and tested on the latest two major browsers.
+The UI must adapt seamlessly to mobile, tablet, and desktop.
 
 ### IV. Performance
-The application should load in under 2 seconds on a 3G connection. Caching strategies, code splitting, and asset optimization are mandatory.
+The application should load in under 2 seconds.
 
 ### V. Security & Authentication (Auth‑First)
-- All user input is sanitized to prevent XSS.
-- CSRF protection is mandatory; all POST routes require a valid CSRF token.
-- Authentication is SAML‑based; only users with a permitted SAML assertion may edit or publish content.
-- Stateless JWTs are issued post‑login and stored securely on the client.
-- All API endpoints require proper scope checks.
+- All user input is sanitized.
+- CSRF protection is mandatory.
+- SAML‑based authentication.
+- Stateless JWTs.
+- Scope checks.
 
 ## Additional Constraints
 
 ### Technology Stack & Architecture
-- Frontend: Next.js 16 (React 18) with Atomic Design and Clean Architecture patterns.
+- Frontend: Next.js 15 (React 18) with Atomic Design and Clean Architecture patterns.
 - Backend: Node.js 25 with Express, serving a server‑less API.
 - Database: SQLite3 stored in Cloud Storage, mounted into Cloud Run via volume.
 - Infrastructure: Deployed on Google Cloud Run; Dockerized via a multi‑stage Dockerfile.
-- Development: Docker Compose on macOS (Linux containers) exposing `localhost:3000` (Node 25, Next 16).
-- CI/CD: GitHub Actions running ESLint, Jest, Docker build, Artifact Registry push, and Cloud Run deployment (Node 25, Next 16).
+- Local Development: Docker Compose on macOS (Linux containers) exposing `localhost:3000`.
+- CI/CD: GitHub Actions running ESLint, Jest, Docker build, Artifact Registry push, and Cloud Run deployment.
 - Authentication: SAML SSO integrated with Google Workspace or another IdP.
+- Styling: Tailwind CSS. Main color zinc‑200, sub‑color yellow‑300, accent color indigo‑400.
 
 ## Development Workflow
 
 ### Review Process
-- All pull requests must pass unit tests (≥90% coverage), linting (ESLint), and static type checks (TS).
+- PRs must pass unit tests (≥90% coverage), linting (ESLint), and static type checks (TS).
 - Code reviews are mandatory; at least one senior developer must approve.
-- All PRs must include a migration plan if database schema changes occur.
+- Migration plan required on schema change.
 
 ### Quality Gates
-- Deployments to staging trigger performance benchmarks (Lighthouse audits) and security scans (OWASP Zap).
+- Staging deployments trigger performance benchmarks and security scans.
 - Docker images are built and scanned with Trivy before being pushed to Artifact Registry.
 
 ### Test‑Driven Development
-- Tests (Jest) are written before or alongside implementation.
-- No code merge is allowed unless all tests pass under the CI pipeline.
+- Tests written before or alongside implementation.
+- No merge unless all tests pass under CI.
 
 ## Governance
 
-All changes to the constitution must be proposed in a GitHub issue, discussed, and approved via a 2/3 majority of council members. Amendments trigger a release candidate build to ensure backward compatibility. Compliance is reviewed quarterly by the governance board.
+All changes to the constitution must be proposed in a GitHub issue, discussed, and approved via a 2/3 majority of council members.
+Compliance reviewed quarterly by the governance board.
 
 **Version**: 1.1.0 | **Ratified**: 2025-10-23 | **Last Amended**: 2025-10-23

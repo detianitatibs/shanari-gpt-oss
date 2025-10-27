@@ -41,5 +41,15 @@
     }
   },
 
+  "permission": {
+    "edit": "ask",
+    "bash": {
+      "git add": "ask",
+      "git commit": "ask",
+      "git push": "ask"
+    },
+    "webfetch": "allow"
+  },
+
   "instructions": ["AGENTS.md"]
 }

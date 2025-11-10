@@ -1,50 +1,58 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+## Sync Impact Report
+- Version change: 0.1.0 → 0.1.1 (minor) - principl refinement
+- Modified principles:
+  - コード品質
+  - テスト基準
+  - ユーザー体験一貫性
+  - パフォーマンス要件
+  - 技術的意思決定ガバナンス
+- Added sections: none
+- Removed sections: none
+- Templates requiring updates:
+  - ✅ .specify/templates/tasks-template.md (task categories updated)
+  - ⚠ .specify/templates/plan-template.md (review needed)
+- Follow-up TODOs:
+  - TODO(RATIFICATION_DATE): 実際の採択日を確認
+-->
+
+# Shanari GPT OSS Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### コード品質
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+コードは明快で再利用しやすい設計とし、設計時に設計文書を作成すること。コードは単一責任を持ち、依存関係は明示的に管理し、テストカバレッジは 90％以上を維持する。
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### テスト基準
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+全機能はユニットテスト、統合テスト、E2E テストを網羅し、テストは CI で自動実行する。テストはテスト駆動設計（TDD）を採用し、失敗してから実装し、Red‑Green‑Refactor を厳守する。
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### ユーザー体験一貫性
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+UI は Atomic Design の再利用可能コンポーネントで構成し、アクセシビリティは WCAG 2.1 AA を満たす。ドキュメントは日本語で完結し、ユーザーマニュアルはビジュアルで理解できるようにする。
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### パフォーマンス要件
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+ロード時間は 2 秒以内、CPU 使用率は 25％以下に抑える。メモリリークは発見次第修正し、キャッシュ戦略は期限付き LRU を原則とする。
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### 技術的意思決定ガバナンス
+
+技術選定はレビュー委員会が審議し、決定はドキュメント化する。変更は提案書（PR）で提起し、最低 2 名のレビューで承認する。大きな変更はマイルストーンにて宣言する。
+
+## 追加制約
+
+（今後、本プロジェクトで必要となるセキュリティ・規格要件等を追記）
+
+## 開発ワークフロー
+
+GitHub Actions を用いた CI/CD を実施し、PR は必ずテスト通過・コードレビュー完了後にマージする。リリースは Semantic Versioning に基づき、リリースノートは自動生成する。
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+1. 本憲章は全開発者の合意に基づき制定される。
+2. 変更は提案書で起案し、実行時は 2 週間のコメント期間を設ける。
+3. 変更が既存コードに重大な影響を与える場合、ラージブレークプランを作成する。
+4. 本憲章の最新改訂日は README 等に記載し、CI でチェックを行う。
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 0.1.1 | **Ratified**: TODO(RATIFICATION_DATE) | **Last Amended**: 2025-11-10

@@ -42,6 +42,9 @@ specs/001-hello-world/
 ### Source Code (repository root)
 ```
 web/
+├── tests/
+│     └── integration/
+│         └── page.test.tsx
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx   # Hello World ページ

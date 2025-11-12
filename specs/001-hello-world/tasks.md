@@ -17,11 +17,11 @@
 
 ## Phase 3: User Story 1 - Browser で Hello World を表示する (Priority: P1)
 
-- [ ] T007 [US1] `web/src/app/page.tsx` を作成し "Hello World" を表示
-- [ ] T008 [US1] Text コンポーネント `web/src/components/atoms/Text/Text.tsx` を作成
-- [ ] T009 [US1] Text コンポーネントに対する Storybook ストーリー `web/src/components/atoms/Text/Text.stories.tsx` を作成
-- [ ] T010 [US1] Text コンポーネントに対するユニットテスト `web/tests/unit/Text.test.tsx` を作成
-- [ ] T011 [US1] 統合テスト `web/tests/integration/page.test.tsx` を作成し、`localhost:3000` が "Hello World" を表示することを検証
+- [x] T007 [US1] `web/src/app/page.tsx` を作成し "Hello World" を表示
+- [x] T008 [US1] Text コンポーネント `web/src/components/atoms/Text/Text.tsx` を作成
+- [x] T009 [US1] Text コンポーネントに対する Storybook ストーリー `web/src/components/atoms/Text/Text.stories.tsx` を作成
+- [x] T010 [US1] Text コンポーネントに対するユニットテスト `web/tests/unit/Text.test.tsx` を作成
+- [x] T011 [US1] 統合テスト `web/tests/integration/page.test.tsx` を作成し、`localhost:3000` が "Hello World" を表示することを検証
 
 ## Phase 4: Polish & Cross‑Cutting Concerns
 

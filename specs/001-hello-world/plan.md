@@ -48,14 +48,17 @@ web/
 │   │   └── layout.tsx
 │   ├── components/
 │   │   ├── atoms/
-│   │   │   └── Button.tsx
-│   │   │   └── Button.stories.tsx
+│   │   │   ├── Button/
+│   │   │   │   └── Button.tsx
+│   │   │   │   └── Button.stories.tsx
 │   │   ├── molecules/
-│   │   │   └── Card.tsx
-│   │   │   └── Card.stories.tsx
+│   │   │   ├── Card/
+│   │   │   │   └── Card.tsx
+│   │   │   │   └── Card.stories.tsx
 │   │   └── organisms/
-│   │       └── Header.tsx
-│   │       └── Header.stories.tsx
+│   │       ├── Header/
+│   │       │   └── Header.tsx
+│   │       │   └── Header.stories.tsx
 │   └── lib/
 │       └── constants.ts
 ├── public/

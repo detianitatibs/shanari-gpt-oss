@@ -25,7 +25,7 @@
 
 ## Phase 4: Polish & Cross‑Cutting Concerns
 
-- [ ] T012 README に quickstart.md の内容を追加する
+- [x] T012 README に quickstart.md の内容を追加する
 
 ## Dependencies & Execution Order
 

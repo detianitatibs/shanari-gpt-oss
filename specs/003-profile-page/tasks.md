@@ -12,8 +12,8 @@ description: "Task list for Profile Page feature implementation"
 - [ ] [P] T001 プロフィールページ用のルートフォルダと Page コンポーネントの雛形を作成 `web/src/app/profile/Page.tsx`
 - [ ] [P] T002 プロフィールページ用のレイアウトファイルを作成 `web/src/app/profile/layout.tsx`
 - [ ] [P] T003 コンポーネント用ディレクトリ（atoms, molecules, organisms）を作成 `web/src/components/`
-- [ ] [P] T004 置換用コンポーネントファイルを作成: `Icon.tsx`, `Text.tsx`, `ProfileInfo.tsx`, `SNSLinks.tsx`, `ProfilePage.tsx`
-- [ ] [P] T005 プレースホルダー画像を公開ディレクトリへコピー `web/public/images/placeholder-avatar.png`
+- [ ] [P] T004 置換用コンポーネントファイルを作成: `Icon.tsx`(atoms), `Text.tsx`(atoms), `ProfileInfo.tsx`(molecules), `SNSLinks.tsx`(molecules), `ProfilePage.tsx`(organisms)
+- [ ] [P] T005 プレースホルダー画像を公開ディレクトリに仮作成(アバター用の画像を生成してください) `web/public/images/placeholder-avatar.png`
 
 ## Phase 3: User Story 1 - プロフィール確認 (Priority: P1)
 

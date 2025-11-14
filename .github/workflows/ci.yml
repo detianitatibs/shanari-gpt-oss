@@ -4,8 +4,8 @@ on:
   # PRが作成された時、または既存のPRにコミットがpushされた時にトリガーされる
   pull_request:
     # ターゲットブランチ（ベースブランチ）を指定する場合は branches: を使用
-    # 例: mainブランチに向けたPRのみを対象とする
-    branches: [main]
+    # 例: masterブランチに向けたPRのみを対象とする
+    branches: [master]
 
     # 変更があったファイルパスをフィルタリング
     paths:

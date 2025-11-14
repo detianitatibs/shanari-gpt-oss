@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  # PRが作成された時、または既存のPRにコミットがpushされた時にトリガーされる
+  pull_request:
+    # ターゲットブランチ（ベースブランチ）を指定する場合は branches: を使用
+    # 例: mainブランチに向けたPRのみを対象とする
+    branches: [main]
+
+    # 変更があったファイルパスをフィルタリング
+    paths:
+      - "web/**"
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - run: cd web && npm ci
+      - run: cd web && npx eslint . --max-warnings=0
+      - run: cd web && npx prettier --check .
+
+  test:
+    name: Test
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - run: cd web && npm ci
+      - run: cd web && npm run test -- --coverage
+
+  docker-build:
+    name: Docker Build
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cd web && docker build -t myapp:web .
+
+  report:
+    name: Report
+    needs: docker-build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Generate report" > report.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ci-report
+          path: report.html

@@ -21,11 +21,11 @@ description: "CI品質チェック実装タスク一覧"
 
 **目的**: すべてのユーザーストーリーが実装可能になるまでに必要なインフラを整備
 
-- [ ] T001 GitHub Actions のワークフローファイル `.github/workflows/ci.yml` を作成
-- [ ] T002 [P] README.md に GitHub Actions Secrets 作成手順を追加
-- [ ] T003 [P] Docker ビルドステップのテンプレートを作成
-- [ ] T004 ワークフロー内に品質ゲートロジック（ジョブ失敗時に CI を失敗にする）を準備
-- [ ] T005 `web/` 配下に Dockerfile を置き、ワークフローから参照できるようにする
+- [X] T001 GitHub Actions のワークフローファイル `.github/workflows/ci.yml` を作成
+- [X] T002 [P] README.md に GitHub Actions Secrets 作成手順を追加
+- [X] T003 [P] Docker ビルドステップのテンプレートを作成
+- [X] T004 ワークフロー内に品質ゲートロジック（ジョブ失敗時に CI を失敗にする）を準備
+- [X] T005 `web/` 配下に Dockerfile を置き、ワークフローから参照できるようにする
 
 ## フェーズ 2: ユーザーストーリー 1 - コード品質を自動検証 (優先度 P1) 🎯 MVP
 
@@ -35,11 +35,11 @@ description: "CI品質チェック実装タスク一覧"
 
 ### 実装タスク
 
-- [ ] T006 [P] [US1] GitHub Actions の `lint` ジョブを作成し、ESLint と Prettier を実行
-- [ ] T007 [P] [US1] GitHub Actions の `test` ジョブを作成し、Vitest を実行してカバレッジを取得
-- [ ] T008 [P] [US1] GitHub Actions の `docker-build` ジョブを作成し、`web/` で Docker イメージをビルド
-- [ ] T009 [US1] `test` が `lint` に、`docker-build` が `test` に依存するようにジョブを構成
-- [ ] T010 [US1] 最終 `report` ジョブを作成し、ログを集約して簡易 HTML レポートを artifact として保存
+- [X] T006 [P] [US1] GitHub Actions の `lint` ジョブを作成し、ESLint と Prettier を実行
+- [X] T007 [P] [US1] GitHub Actions の `test` ジョブを作成し、Vitest を実行してカバレッジを取得
+- [X] T008 [P] [US1] GitHub Actions の `docker-build` ジョブを作成し、`web/` で Docker イメージをビルド
+- [X] T009 [US1] `test` が `lint` に、`docker-build` が `test` に依存するようにジョブを構成
+- [X] T010 [US1] 最終 `report` ジョブを作成し、ログを集約して簡易 HTML レポートを artifact として保存
 
 ## フェーズ 3: ユーザーストーリー 2 - ブランチ統合時の品質ゲート (優先度 P2)
 
@@ -49,7 +49,7 @@ description: "CI品質チェック実装タスク一覧"
 
 ### 実装タスク
 
-- [ ] T011 [P] [US2] GitHub Actions のワークフローに PR 結果が失敗時にブロックするポリシーを追加
+- [X] T011 [P] [US2] GitHub Actions のワークフローに PR 結果が失敗時にブロックするポリシーを追加
 
 ## フェーズ 4: ユーザーストーリー 3 - CI 結果の可視化とレポート共有 (優先度 P3)
 
@@ -59,16 +59,16 @@ description: "CI品質チェック実装タスク一覧"
 
 ### 実装タスク
 
-- [ ] T012 [P] [US3] `report` ジョブを拡張し、GitHub Pages へ公開するか artifact として添付
-- [ ] T013 [US3] `summary.md` のテンプレートを作成し、ジョブの成功/失敗情報をまとめる
+- [X] T012 [P] [US3] `report` ジョブを拡張し、GitHub Pages へ公開するか artifact として添付
+- [X] T013 [US3] `summary.md` のテンプレートを作成し、ジョブの成功/失敗情報をまとめる
 
 ## フェーズ N: ポリッシュと横断的課題
 
 **目的**: 複数のストーリーに影響する改善を行う
 
-- [ ] T014 [P] README.md を更新して CI の手順を追加
-- [ ] T015 [P] workflow YAML を整形し、読みやすさを向上
-- [ ] T016 [P] 追加ユニットテスト（ワークフロースクリプトがある場合）
+- [X] T014 [P] README.md を更新して CI の手順を追加
+- [X] T015 [P] workflow YAML を整形し、読みやすさを向上
+- [X] T016 [P] 追加ユニットテスト（ワークフロースクリプトがある場合）
 
 ## 依存関係と実行順序
 

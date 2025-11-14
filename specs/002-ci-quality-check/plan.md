@@ -6,12 +6,12 @@
 
 ## Summary
 
-GitHub Actions による CI パイプラインを構築し、`web/` 配下で変更がある非 master ブランチへ push 時に静的解析（ESLint, Prettier）、テスト（Vitest）、セキュリティチェック（OWASP ZAP）、Docker ビルドチェックを実施し、品質ゲートを設ける。
+GitHub Actions による CI パイプラインを構築し、`web/` 配下で変更がある非 master ブランチへ push 時に静的解析（ESLint, Prettier）、テスト（Vitest）、Docker ビルドチェックを実施し、品質ゲートを設ける。
 
 ## Technical Context
 
 - **Language/Version**: JavaScript / TypeScript（Next.js 16 構成）
-- **Primary Dependencies**: GitHub Actions, ESLint, Prettier, Vitest, OWASP ZAP, Docker
+- **Primary Dependencies**: GitHub Actions, ESLint, Prettier, Vitest, Docker
 - **Storage**: N/A
 - **Testing**: Vitest（ユニット/統合）
 - **Target Platform**: GitHub Actions runner

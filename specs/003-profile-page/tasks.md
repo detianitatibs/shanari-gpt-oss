@@ -12,8 +12,16 @@ description: "Task list for Profile Page feature implementation"
 - [ ] [P] T001 プロフィールページ用のルートフォルダと Page コンポーネントの雛形を作成 `web/src/app/profile/Page.tsx`
 - [ ] [P] T002 プロフィールページ用のレイアウトファイルを作成 `web/src/app/profile/layout.tsx`
 - [ ] [P] T003 コンポーネント用ディレクトリ（atoms, molecules, organisms）を作成 `web/src/components/`
-- [ ] [P] T004 置換用コンポーネントファイルを作成: `Icon.tsx`(atoms), `Text.tsx`(atoms), `ProfileInfo.tsx`(molecules), `SNSLinks.tsx`(molecules), `ProfilePage.tsx`(organisms)
-- [ ] [P] T005 プレースホルダー画像を公開ディレクトリに仮作成(アバター用の画像を生成してください) `web/public/images/placeholder-avatar.png`
+- [ ] [P] T004 Icon コンポーネントを作成 `web/src/components/atoms/Icon/Icon.tsx` と `web/src/components/atoms/Icon/Icon.stories.tsx`
+- [ ] [P] T005 Text コンポーネントを作成 `web/src/components/atoms/Text/Text.tsx` と `web/src/components/atoms/Text/Text.stories.tsx`
+- [ ] [P] T006 ProfileInfo コンポーネントを作成 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx` と `web/src/components/molecules/ProfileInfo/ProfileInfo.stories.tsx`
+- [ ] [P] T007 SNSLinks コンポーネントを作成 `web/src/components/molecules/SNSLinks/SNSLinks.tsx` と `web/src/components/molecules/SNSLinks/SNSLinks.stories.tsx`
+- [ ] [P] T008 ProfilePage コンポーネントを作成 `web/src/components/organisms/ProfilePage/ProfilePage.tsx` と `web/src/components/organisms/ProfilePage/ProfilePage.stories.tsx`
+- [ ] [P] T009 置換用プレースホルダー画像を公開ディレクトリに作成 `web/public/images/placeholder-avatar.png`
+
+## Phase 2: Test Infrastructure
+
+- [ ] T010 テストフォルダ構成を設定し、integration & unit さらに例として `web/tests/integration/page.test.tsx` と `web/tests/unit/component.test.tsx` を作成する。
 
 ## Phase 3: User Story 1 - プロフィール確認 (Priority: P1)
 
@@ -21,38 +29,38 @@ description: "Task list for Profile Page feature implementation"
 
 ### Tests for User Story 1
 
-- [ ] [P] [US1] T008 ProfilePage コンポーネントのユニットテストを書き、必ず失敗させる `tests/unit/ProfilePage.test.tsx`
-- [ ] [P] [US1] T009 ProfilePage の統合テストを書き、必ず失敗させる `tests/integration/ProfilePage.test.tsx`
-- [ ] [P] [US1] T010 ProfilePage の Storybook ストーリーを作成 ` .storybook/organisms/ProfilePage.stories.tsx`
+- [ ] [P] [US1] T011 ProfilePage コンポーネントのユニットテストを書き、必ず失敗させる `web/tests/unit/ProfilePage.test.tsx`
+- [ ] [P] [US1] T012 ProfilePage の統合テストを書き、必ず失敗させる `web/tests/integration/ProfilePage.test.tsx`
+- [ ] [P] [US1] T013 ProfilePage の Storybook ストーリーを作成 `web/src/components/organisms/ProfilePage/ProfilePage.stories.tsx`
 
 ### Implementation for User Story 1
 
-- [ ] [P] [US1] T011 ProfilePage コンポーネントを実装し、ProfileInfo と SNSLinks を組み合わせる `web/src/app/profile/Page.tsx`
-- [ ] [P] [US1] T012 ProfileInfo コンポーネントを実装し、アイコン・ニックネーム・自己紹介（Markdown）を表示 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx`
-- [ ] [P] [US1] T013 SNSLinks コンポーネントを実装し、SNS アイコン付きリンクを表示、無効 URL は非表示にする `web/src/components/molecules/SNSLinks/SNSLinks.tsx`
-- [ ] [P] [US1] T014 ProfileInfo で IconURL がない場合のプレースホルダーを実装 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx`
-- [ ] [P] [US1] T015 ProfileInfo で BioMarkdown が空の場合のプレースホルダーを実装 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx`
-- [ ] [P] [US1] T016 ProfilePage の CSS レイアウトを作成 `web/src/components/organisms/ProfilePage/ProfilePage.tsx`
+- [ ] [P] [US1] T014 ProfileInfo コンポーネントを実装し、アイコン・ニックネーム・自己紹介（Markdown）を表示 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx`
+- [ ] [P] [US1] T015 SNSLinks コンポーネントを実装し、SNS アイコン付きリンクを表示、無効 URL は非表示にする `web/src/components/molecules/SNSLinks/SNSLinks.tsx`
+- [ ] [P] [US1] T016 ProfilePage コンポーネントを実装して ProfileInfo と SNSLinks を組み合わせる `web/app/profile/Page.tsx`
+- [ ] [P] [US1] T017 ProfileInfo で IconURL がない場合のプレースホルダーを実装 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx`
+- [ ] [P] [US1] T018 ProfileInfo で BioMarkdown が空の場合のプレースホルダーを実装 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx`
+- [ ] [P] [US1] T019 ProfilePage の CSS レイアウトを作成 `web/src/components/organisms/ProfilePage/ProfilePage.tsx`
 
 ## Phase 4: User Story 2 - Markdown 自己紹介表示 (Priority: P2)
 
 **Goal**: Render Markdown bio safely as HTML.
 
-### Tests for User Story 2
+### Tests for User 2
 
-- [ ] [P] [US2] T017 Markdown コンポーネントのユニットテストを書き、必ず失敗させる `tests/unit/MarkdownRenderer.test.tsx`
-- [ ] [P] [US2] T018 ProfileInfo の Markdown 表示統合テストを書き、必ず失敗させる `tests/integration/ProfileInfo.test.tsx`
-- [ ] [P] [US2] T019 ProfileInfo の Markdown ストーリーを作成 ` .storybook/molecules/ProfileInfo.stories.tsx`
+- [ ] [P] [US2] T020 Markdown コンポーネントのユニットテストを書き、必ず失敗させる `web/tests/unit/MarkdownRenderer.test.tsx`
+- [ ] [P] [US2] T021 ProfileInfo の Markdown 表示統合テストを書き、必ず失敗させる `web/tests/integration/ProfileInfo.test.tsx`
+- [ ] [P] [US2] T022 Markdown コンポーネントの Storybook ストーリーを作成 `web/src/components/atoms/Markdown/Markdown.stories.tsx`
 
-### Implementation for User Story 2
+### Implementation for User 2
 
-- [ ] [P] [US2] T020 MarkdownRenderer コンポーネントを実装し、軽量パーサーを使用 `web/src/components/atoms/Markdown/Markdown.tsx`
-- [ ] [P] [US2] T021 ProfileInfo で MarkdownRenderer を使用するように更新 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx`
+- [ ] [P] [US2] T023 MarkdownRenderer コンポーネントを実装し、軽量パーサーを使用 `web/src/components/atoms/Markdown/Markdown.tsx`
+- [ ] [P] [US2] T024 ProfileInfo で MarkdownRenderer を使用するように更新 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx`
 
 ## Phase 5: Polish & Cross‑Cutting Concerns
 
-- [ ] T022 リンティング、フォーマッティング、CI チェックを実行し、プロジェクト基準に準拠することを確認する
-- [ ] T023 すべてのテストが通過し、カバレッジが 90％以上であることを確認する
-- [ ] T024 ドキュメントを更新し、新しいコンポーネントと使用例を反映する
+- [ ] T033 リンティング、フォーマッティング、CI チェックを実行し、プロジェクト基準に準拠することを確認する
+- [ ] T034 すべてのテストが通過し、カバレッジが 90％以上であることを確認する
+- [ ] T035 `README.md`ドキュメントを更新し、新しいコンポーネントと使用例を反映する
 
 ---

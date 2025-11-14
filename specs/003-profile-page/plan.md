@@ -56,19 +56,29 @@ web/
 │   ├── components/
 │   │   ├── atoms/
 │   │   │   ├── Icon/
-│   │   │   │   └── Icon.tsx
+│   │   │   │   ├── Icon.tsx
+│   │   │   │   └── Icon.stories.tsx   # Storybook
 │   │   │   └── Text/
-│   │   │       └── Text.tsx
+│   │   │       ├── Text.tsx
+│   │   │       └── Text.stories.tsx   # Storybook
 │   │   ├── molecules/
 │   │   │   ├── ProfileInfo/
-│   │   │   │   └── ProfileInfo.tsx
+│   │   │   │   ├── ProfileInfo.tsx
+│   │   │   │   └── ProfileInfo.stories.tsx   # Storybook
 │   │   │   └── SNSLinks/
-│   │   │       └── SNSLinks.tsx
+│   │   │       ├── SNSLinks.tsx
+│   │   │       └── SNSLinks.stories.tsx   # Storybook
 │   │   └── organisms/
 │   │       └── ProfilePage/
-│   │           └── ProfilePage.tsx
+│   │           ├── ProfilePage.tsx
+│   │           └── ProfilePage.stories.tsx   # Storybook
 │   └── lib/
 │       └── constants.ts
+├── tests/
+│   ├── integration/
+│   │   └── page.test.tsx            # Example integration test
+│   └── unit/
+│       └── component.test.tsx        # Example unit test
 └── public/
     └── images/
         └── placeholder-avatar.png

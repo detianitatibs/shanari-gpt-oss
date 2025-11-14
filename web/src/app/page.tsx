@@ -1,4 +1,4 @@
-import { Text } from '@/components/atoms/Text/Text';
+import { Text } from "@/components/atoms/Text/Text";
 
 export default function Page() {
   return (

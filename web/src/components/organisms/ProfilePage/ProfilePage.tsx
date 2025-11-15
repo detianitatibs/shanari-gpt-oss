@@ -4,7 +4,7 @@ import { SNSLinks } from "@/components/molecules/SNSLinks/SNSLinks";
 
 export const ProfilePage: React.FC = () => {
   const mockData = {
-    iconUrl: "",
+    iconUrl: "/images/placeholder-avatar.png",
     nickname: "Taro",
     bioMarkdown: "# Hello\nThis is **Markdown**",
     sns: [

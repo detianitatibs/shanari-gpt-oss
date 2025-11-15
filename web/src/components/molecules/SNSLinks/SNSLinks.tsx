@@ -10,13 +10,14 @@ export const SNSLinks: React.FC<SNSLinksProps> = ({ links }) => (
     {links
       .filter((l) => l.url && l.url.startsWith("http"))
       .map((l) => (
-        <a
-          key={l.name}
-          href={l.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-600 hover:text-gray-800"
-        >
+<a
+  key={l.name}
+  href={l.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-600 hover:text-gray-800"
+  aria-label={l.name}
+>
           <Icon iconName={l.iconName} size={24} />
         </a>
       ))}

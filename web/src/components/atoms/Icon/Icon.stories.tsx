@@ -5,4 +5,4 @@ export default {
   component: Icon,
 };
 
-export const Default = () => <Icon src="/icons/sample.svg" alt="Sample" />;
+export const Default = () => <Icon iconName="FaGithub" size={24} />;

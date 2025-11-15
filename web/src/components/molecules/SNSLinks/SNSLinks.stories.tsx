@@ -14,8 +14,8 @@ type Story = StoryObj<typeof SNSLinks>;
 export const Default: Story = {
   args: {
     links: [
-      { name: "GitHub", url: "https://github.com", iconSrc: "/icons/github.svg" },
-      { name: "Twitter", url: "https://twitter.com", iconSrc: "/icons/twitter.svg" },
+      { name: "GitHub", url: "https://github.com", iconName: "FaGithub" },
+      { name: "Twitter", url: "https://twitter.com", iconName: "FaTwitter" },
     ],
   },
 };

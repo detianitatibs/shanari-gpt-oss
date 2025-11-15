@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "@/components/atoms/Icon/Icon";
+import Image from "next/image";
 import { Text } from "@/components/atoms/Text/Text";
 import { MarkdownRenderer } from "@/components/atoms/Markdown/Markdown";
 
@@ -25,7 +25,13 @@ export const ProfileInfo: React.FC<ProfileInfoProps> = ({
 
   return (
     <div className="flex flex-col items-center">
-      <Icon src={iconUrl ?? defaultAvatar} alt={displayNickname} size={96} />
+      <Image
+        src={iconUrl ?? defaultAvatar}
+        alt={displayNickname}
+        width={96}
+        height={96}
+        className="rounded-full"
+      />
       <Text className="text-xl font-bold mt-2">{displayNickname}</Text>
       {displayBio}
     </div>

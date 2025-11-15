@@ -2,7 +2,7 @@ import React from "react";
 import { Icon } from "@/components/atoms/Icon/Icon";
 
 export type SNSLinksProps = {
-  links: { name: string; url: string; iconSrc: string }[];
+  links: { name: string; url: string; iconName: string }[];
 };
 
 export const SNSLinks: React.FC<SNSLinksProps> = ({ links }) => (
@@ -17,8 +17,9 @@ export const SNSLinks: React.FC<SNSLinksProps> = ({ links }) => (
           rel="noopener noreferrer"
           className="text-gray-600 hover:text-gray-800"
         >
-          <Icon src={l.iconSrc} alt={l.name} size={24} />
+          <Icon iconName={l.iconName} size={24} />
         </a>
       ))}
   </div>
 );
+

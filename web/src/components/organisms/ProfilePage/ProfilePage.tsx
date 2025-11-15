@@ -11,12 +11,12 @@ export const ProfilePage: React.FC = () => {
       {
         name: "GitHub",
         url: "https://github.com",
-        iconSrc: "/icons/github.svg",
+        iconName: "FaGithub",
       },
       {
         name: "Twitter",
         url: "https://twitter.com",
-        iconSrc: "/icons/twitter.svg",
+        iconName: "FaTwitter",
       },
     ],
   };

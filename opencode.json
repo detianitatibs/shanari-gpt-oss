@@ -51,5 +51,13 @@
     "webfetch": "allow"
   },
 
-  "instructions": ["AGENTS.md"]
+  "instructions": ["AGENTS.md"],
+
+  "mcp": {
+    "nextjs": {
+      "type": "local",
+      "command": ["npx", "-y", "next-devtools-mcp@latest"],
+      "enabled": true
+    }
+  }
 }

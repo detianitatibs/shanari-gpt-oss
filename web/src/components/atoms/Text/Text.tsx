@@ -6,5 +6,5 @@ export interface TextProps {
 }
 
 export const Text = ({ children, className = "" }: TextProps) => {
-  return <span className={className}>{children}</span>;
+  return <p className={className}>{children}</p>;
 };

@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
-import { ProfilePage } from '@/components/organisms/ProfilePage/ProfilePage';
+import { render } from "@testing-library/react";
+import { ProfilePage } from "@/components/organisms/ProfilePage/ProfilePage";
 
-test('ProfilePage integration test sample', () => {
+test("ProfilePage integration test sample", () => {
   render(<ProfilePage />);
 });

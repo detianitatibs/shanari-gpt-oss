@@ -9,15 +9,15 @@ description: "Task list for Profile Page feature implementation"
 
 ## Phase 1: Setup (Shared Infrastructure)
 
-- [ ] [P] T001 プロフィールページ用のルートフォルダと Page コンポーネントの雛形を作成 `web/src/app/profile/Page.tsx`
-- [ ] [P] T002 プロフィールページ用のレイアウトファイルを作成 `web/src/app/profile/layout.tsx`
-- [ ] [P] T003 コンポーネント用ディレクトリ（atoms, molecules, organisms）を作成 `web/src/components/`
-- [ ] [P] T004 Icon コンポーネントを作成 `web/src/components/atoms/Icon/Icon.tsx` と `web/src/components/atoms/Icon/Icon.stories.tsx`
-- [ ] [P] T005 Text コンポーネントを作成 `web/src/components/atoms/Text/Text.tsx` と `web/src/components/atoms/Text/Text.stories.tsx`
+- [x] [P] T001 プロフィールページ用のルートフォルダと Page コンポーネントの雛形を作成 `web/src/app/profile/Page.tsx`
+- [x] [P] T002 プロフィールページ用のレイアウトファイルを作成 `web/src/app/profile/layout.tsx`
+- [x] [P] T003 コンポーネント用ディレクトリ（atoms, molecules, organisms）を作成 `web/src/components/`
+- [x] [P] T004 Icon コンポーネントを作成 `web/src/components/atoms/Icon/Icon.tsx` と `web/src/components/atoms/Icon/Icon.stories.tsx`
+- [x] [P] T005 Text コンポーネントを作成 `web/src/components/atoms/Text/Text.tsx` と `web/src/components/atoms/Text/Text.stories.tsx`
 - [ ] [P] T006 ProfileInfo コンポーネントを作成 `web/src/components/molecules/ProfileInfo/ProfileInfo.tsx` と `web/src/components/molecules/ProfileInfo/ProfileInfo.stories.tsx`
 - [ ] [P] T007 SNSLinks コンポーネントを作成 `web/src/components/molecules/SNSLinks/SNSLinks.tsx` と `web/src/components/molecules/SNSLinks/SNSLinks.stories.tsx`
 - [ ] [P] T008 ProfilePage コンポーネントを作成 `web/src/components/organisms/ProfilePage/ProfilePage.tsx` と `web/src/components/organisms/ProfilePage/ProfilePage.stories.tsx`
-- [ ] [P] T009 置換用プレースホルダー画像を公開ディレクトリに作成 `web/public/images/placeholder-avatar.png`
+- [x] [P] T009 置換用プレースホルダー画像を公開ディレクトリに作成 `web/public/images/placeholder-avatar.png`
 
 ## Phase 2: Test Infrastructure
 
